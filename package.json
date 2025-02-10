@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "docker:build": "sudo docker build --tag 'my-sales' .",
-    "docker:run": "sudo docker run -detach 'my-sales'"
+    "docker:build": "sudo docker build --tag my-sales .",
+    "docker:run": "sudo docker run -p 3000:3000 my-sales"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
