@@ -1,5 +1,6 @@
 import api from '@/lib/axios';
 import { Product } from '@/types/products';
+import { CACHE_TTL, cacheInstance } from '@/utils/cache';
 import { FilterOptions } from '@/utils/filterUtils';
 
 export const productService = {
@@ -14,7 +15,16 @@ export const productService = {
   },
 
   async getProductById(id: string) {
+    const cacheKey = `product-${id}`;
+    const cachedProduct = cacheInstance.get(cacheKey);
+    if (cachedProduct) {
+      console.log('Cache hit for product:', id);
+      return cachedProduct;
+    }
+
     const { data } = await api.get<Product>(`/products/${id}`);
+
+    cacheInstance.set(cacheKey, data, CACHE_TTL);
     return data;
   }
 };
