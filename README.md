@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js E-commerce Project
 
-## Getting Started
+A responsive marketing-focused web application built with Next.js, demonstrating modern web development practices and SEO optimization.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Product Listing**
+  - Dynamic product fetching with caching
+  - Filtering and search functionality
+  - Responsive design (mobile, tablet, desktop)
+  - Loading states and error handling
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Product Details**
+  - SEO optimized pages
+  - Dynamic routing
+  - Image optimization
+  - Stock status indication
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Technical Features**
+  - Server-side rendering (SSR)
+  - Static site generation (SSG)
+  - Incremental Static Regeneration (ISR)
+  - Data caching system
+  - Type safety with TypeScript
+  - Responsive design with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- Next.js (Latest)
+- TypeScript
+- Tailwind CSS
+- Docker
+- Git
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
+2. docker build -t nextjs-ecommerce .
+3. docker run -p 3000:3000 nextjs-ecommerce
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment Variables
+Create a .env.local file in the root directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_API_URL=your_api_url
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## API Routes
+
+GET /api/products - Get all products
+GET /api/products/:id - Get single product
+GET /api/products/related/:id - Get related products
