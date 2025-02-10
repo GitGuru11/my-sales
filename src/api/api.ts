@@ -1,22 +1,21 @@
-import { Product } from "@/types/products";
-import { ApiResponse } from "@/types";
+import axios from 'axios';
+import { Product } from '@/types/products';
 
-const data = await import('@/data/products.json');
+const api = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+});
 
-export async function getProducts(): Promise<ApiResponse<Product[]>> {
-  try {
-    // In real app, this would be an API call
-    return { data: data.products };
-  } catch (error) {
-    return { data: [], error: 'Failed to fetch products' };
-  }
-}
+export const getProducts = async (filters?: any): Promise<Product[]> => {
+  const { data } = await api.get('/products', { params: filters });
+  return data;
+};
 
-export async function getProduct(id: string): Promise<ApiResponse<Product | null>> {
-  try {
-    const product = data.products.find(p => p.id === id);
-    return { data: product || null };
-  } catch (error) {
-    return { data: null, error: 'Failed to fetch product' };
-  }
-}
+export const getProductById = async (id: string): Promise<Product> => {
+  const { data } = await api.get(`/products/${id}`);
+  return data;
+};
+
+export const getFilterOptions = async (id: string): Promise<Product> => {
+  const { data } = await api.get(`/filters`);
+  return data;
+};

@@ -1,76 +1,89 @@
 import { useState } from 'react';
 
-interface ProductFilterProps {
-  categories: string[];
-  onFilterChange: (categories: string[], searchTerm: string) => void;
+interface FilterOption {
+  id: string;
+  name: string;
 }
 
-export default function ProductFilter({ categories, onFilterChange }: ProductFilterProps) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
+const categories: FilterOption[] = [
+  { id: 'all', name: 'All' },
+  { id: 'electronics', name: 'Electronics' },
+  { id: 'clothing', name: 'Clothing' },
+  { id: 'books', name: 'Books' },
+];
 
-  const handleCategoryChange = (category: string) => {
-    const updatedCategories = selectedCategories.includes(category)
-      ? selectedCategories.filter(c => c !== category)
-      : [...selectedCategories, category];
-    
-    setSelectedCategories(updatedCategories);
-    onFilterChange(updatedCategories, searchTerm);
+const priceRanges: FilterOption[] = [
+  { id: 'all', name: 'All' },
+  { id: '0-50', name: 'Under $50' },
+  { id: '50-100', name: '$50 to $100' },
+  { id: '100-plus', name: 'Over $100' },
+];
+
+interface ProductFilterProps {
+  onFilterChange: (filters: any) => void;
+}
+
+export default function ProductFilter({ onFilterChange }: ProductFilterProps) {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    onFilterChange({
+      category: categoryId === 'all' ? null : categoryId,
+      priceRange: selectedPriceRange === 'all' ? null : selectedPriceRange,
+    });
   };
 
-  const handleSearch = (value: string) => {
-    setSearchTerm(value);
-    onFilterChange(selectedCategories, value);
-  };
-
-  const clearFilters = () => {
-    setSelectedCategories([]);
-    setSearchTerm('');
-    onFilterChange([], '');
+  const handlePriceRangeChange = (rangeId: string) => {
+    setSelectedPriceRange(rangeId);
+    onFilterChange({
+      category: selectedCategory === 'all' ? null : selectedCategory,
+      priceRange: rangeId === 'all' ? null : rangeId,
+    });
   };
 
   return (
-    <div className="mb-8 space-y-4">
-      {/* Search Input */}
-      <div className="relative">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchTerm}
-          onChange={(e) => handleSearch(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
-      {/* Category Filters */}
+    <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-medium mb-2">Categories</h3>
-        <div className="flex flex-wrap gap-2">
+        <h3 className="text-lg font-medium text-gray-900">Categories</h3>
+        <ul className="mt-4 space-y-2">
           {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => handleCategoryChange(category)}
-              className={`px-4 py-2 rounded-full text-sm ${
-                selectedCategories.includes(category)
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-              }`}
-            >
-              {category}
-            </button>
+            <li key={category.id}>
+              <button
+                onClick={() => handleCategoryChange(category.id)}
+                className={`${
+                  selectedCategory === category.id
+                    ? 'text-indigo-600'
+                    : 'text-gray-500'
+                } hover:text-gray-700`}
+              >
+                {category.name}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
-      {/* Clear Filters */}
-      {(selectedCategories.length > 0 || searchTerm) && (
-        <button
-          onClick={clearFilters}
-          className="text-blue-500 text-sm hover:text-blue-700"
-        >
-          Clear all filters
-        </button>
-      )}
+      <div>
+        <h3 className="text-lg font-medium text-gray-900">Price Range</h3>
+        <ul className="mt-4 space-y-2">
+          {priceRanges.map((range) => (
+            <li key={range.id}>
+              <button
+                onClick={() => handlePriceRangeChange(range.id)}
+                className={`${
+                  selectedPriceRange === range.id
+                    ? 'text-indigo-600'
+                    : 'text-gray-500'
+                } hover:text-gray-700`}
+              >
+                {range.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
