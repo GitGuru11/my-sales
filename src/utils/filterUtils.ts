@@ -4,7 +4,7 @@ export interface FilterOptions {
   categories: Array<{ id: string; name: string; count: number }>;
   brands: Array<{ id: string; name: string; count: number }>;
   priceRanges: Array<{ id: string; name: string; min: number; max: number; count: number }>;
-  ratings: Array<{ id: string; value: number; count: number }>;
+  ratings: Array<{ id: string; name: string; count: number }>;
   sizes: Array<{ id: string; name: string; count: number }>;
   colors: Array<{ id: string; name: string; count: number }>;
   availability: Array<{ id: string; name: string; count: number }>;
@@ -53,7 +53,7 @@ export function extractFilterOptions(products: Product[]): FilterOptions {
   // Ratings
   const ratings = [5, 4, 3, 2, 1].map(rating => ({
     id: `${rating}`,
-    value: rating,
+    name: rating.toString(),
     count: products.filter(p => Math.floor(p.rating) === rating).length
   }));
 
