@@ -1,5 +1,5 @@
-import { Product } from "@/app/types/products";
-import { ApiResponse } from "@/app/types";
+import { Product } from "@/types/products";
+import { ApiResponse } from "@/types";
 
 const data = await import('@/data/products.json');
 
