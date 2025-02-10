@@ -63,7 +63,6 @@ export function useProducts() {
 
   useEffect(() => {
     retry();
-    fetchProductById("ELEC-001")
   }, []);
 
   return {
