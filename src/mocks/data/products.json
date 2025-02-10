@@ -11,7 +11,7 @@
       "rating": 4.5,
       "reviews": 230,
       "features": ["4K Resolution", "Smart Features", "HDR Support"],
-      "images": ["tv-front.jpg", "tv-angle.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 599.99
     },
@@ -26,7 +26,7 @@
       "rating": 4.7,
       "reviews": 450,
       "features": ["Active Noise Cancellation", "30hr Battery", "Quick Charge"],
-      "images": ["headphones-front.jpg", "headphones-side.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -41,7 +41,7 @@
       "rating": 4.6,
       "reviews": 890,
       "features": ["5G", "Triple Camera", "128GB Storage"],
-      "images": ["phone-front.jpg", "phone-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 849.99
     },
@@ -57,7 +57,7 @@
       "colors": ["Blue", "Black"],
       "rating": 4.4,
       "reviews": 156,
-      "images": ["jacket-front.jpg", "jacket-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -73,7 +73,7 @@
       "colors": ["White", "Black", "Gray", "Navy"],
       "rating": 4.3,
       "reviews": 320,
-      "images": ["tshirt-front.jpg", "tshirt-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 19.99
     },
@@ -89,7 +89,7 @@
       "colors": ["Gray", "Navy", "Burgundy"],
       "rating": 4.5,
       "reviews": 178,
-      "images": ["sweater-front.jpg", "sweater-detail.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -105,7 +105,7 @@
       "colors": ["Black/Red", "Blue/White", "Gray/Yellow"],
       "rating": 4.6,
       "reviews": 425,
-      "images": ["shoes-side.jpg", "shoes-top.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 99.99
     },
@@ -120,7 +120,7 @@
       "rating": 4.8,
       "reviews": 340,
       "features": ["16GB RAM", "512GB SSD", "4K Display"],
-      "images": ["laptop-front.jpg", "laptop-open.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 1199.99
     },
@@ -136,7 +136,7 @@
       "colors": ["Black", "Navy", "Gray"],
       "rating": 4.4,
       "reviews": 89,
-      "images": ["blazer-front.jpg", "blazer-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -152,7 +152,7 @@
       "colors": ["White", "Black", "Gray"],
       "rating": 4.3,
       "reviews": 267,
-      "images": ["sneakers-side.jpg", "sneakers-top.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 69.99
     },
@@ -167,7 +167,7 @@
       "rating": 4.5,
       "reviews": 178,
       "features": ["Heart Rate Monitor", "GPS", "Water Resistant"],
-      "images": ["watch-front.jpg", "watch-side.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -183,7 +183,7 @@
       "colors": ["Black", "Navy", "Green"],
       "rating": 4.7,
       "reviews": 145,
-      "images": ["coat-front.jpg", "coat-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 169.99
     },
@@ -199,7 +199,7 @@
       "colors": ["Black", "Brown"],
       "rating": 4.6,
       "reviews": 112,
-      "images": ["oxford-side.jpg", "oxford-top.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -214,7 +214,7 @@
       "rating": 4.4,
       "reviews": 890,
       "features": ["Noise Cancelling", "Water Resistant", "24hr Battery"],
-      "images": ["earbuds-case.jpg", "earbuds-solo.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 129.99
     },
@@ -230,7 +230,7 @@
       "colors": ["Blue", "Black", "Gray"],
       "rating": 4.5,
       "reviews": 234,
-      "images": ["jeans-front.jpg", "jeans-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -246,7 +246,7 @@
       "colors": ["Brown", "Black"],
       "rating": 4.7,
       "reviews": 167,
-      "images": ["boots-side.jpg", "boots-front.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 159.99
     },
@@ -261,7 +261,7 @@
       "rating": 4.9,
       "reviews": 756,
       "features": ["4K Gaming", "1TB Storage", "Ray Tracing"],
-      "images": ["console-front.jpg", "console-angle.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -277,7 +277,7 @@
       "colors": ["Gray", "Black", "Navy", "Red"],
       "rating": 4.4,
       "reviews": 289,
-      "images": ["hoodie-front.jpg", "hoodie-back.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 39.99
     },
@@ -293,7 +293,7 @@
       "colors": ["White", "Black", "Red", "Blue"],
       "rating": 4.3,
       "reviews": 198,
-      "images": ["canvas-side.jpg", "canvas-top.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": false,
       "salePrice": null
     },
@@ -308,7 +308,7 @@
       "rating": 4.6,
       "reviews": 445,
       "features": ["256GB Storage", "Pencil Support", "4K Display"],
-      "images": ["tablet-front.jpg", "tablet-angle.jpg"],
+      "images": ["https://placehold.co/600x400", "https://placehold.co/800"],
       "isOnSale": true,
       "salePrice": 749.99
     }
